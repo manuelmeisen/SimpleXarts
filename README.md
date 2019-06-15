@@ -1,6 +1,6 @@
 # SimpleXarts
 
-SimpleXarts is a live update charting library, designed to be used with MVVM and not leak into the Viewmodel.
+SimpleXarts is a live update charting library, designed to be used with MVVM.
 
 ## Getting started
 
@@ -13,18 +13,35 @@ Its not recommended to be used in its current state
 
 ### Setup project
 
-#### 1°) Create the data to bind to your chart
-
-This can be a list of any types that implement the needed Properties
+#### 1) Create the data to bind to your chart
 
 ```csharp
-public class MyFigure
+public ObservableCollection<Figure> Data { get; set; } = new ObservableCollection<Figure>()
 {
-    public int Value {get;set;}
-    public string Describtion {get;set;}
-    public System.Drawing.Color Color {get;set;}
-}
+    new Figure(20)
+    {
+        Describtion = "Bread",
+        Color = System.Drawing.Color.Brown
+    },
+    new Figure(5)
+    {
+        Describtion = "Meat",
+        Color = System.Drawing.Color.Red
+    },
+    new Figure(12)
+    {
+        Describtion = "Fish",
+        Color = System.Drawing.Color.Blue
+    }
+};
 ```
 
-You don't need to set every property, just the ones you need.
-For live updates, your class needs to implement the INotifyPropertyChange
+#### 2) Bind it to your chart
+```xaml
+<SimpleXarts:DonutChart Figures="{Binding Data/>
+```
+
+#### 3) Update your data
+```csharp
+Data[0].Value = 30;
+```
