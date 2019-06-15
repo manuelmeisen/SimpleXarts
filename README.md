@@ -38,7 +38,7 @@ public ObservableCollection<Figure> Data { get; set; } = new ObservableCollectio
 
 #### 2) Bind it to your chart
 ```xaml
-<SimpleXarts:DonutChart Figures="{Binding Data/>
+<SimpleXarts:DonutChart Figures="{Binding Data} />
 ```
 
 #### 3) Update your data
