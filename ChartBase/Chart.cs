@@ -192,7 +192,7 @@ namespace SimpleXart
                 case NotifyCollectionChangedAction.Add:
                     foreach (var o in e.NewItems)
                     {
-                        FigureAccess access = new FigureAccess(o, OnFigureValueChanged);
+                        FigureAccess access = new FigureAccess(o, OnFigureValueChanged, easeInValue: true);
                         FigureAccesses.Add(access);
                         var entryAnimation = new Animation((v) => { access.Entrance = (float)v; Redraw(); }, 0, 1, Easing.CubicInOut);
                         entryAnimation.Commit(this, access.EntranceHandle, _animationFramerate, 500u);
@@ -231,7 +231,7 @@ namespace SimpleXart
 
             foreach (object figure in Figures)
             {
-                output.Add(new FigureAccess(figure, OnFigureValueChanged) { Entrance = 1f });
+                output.Add(new FigureAccess(figure, OnFigureValueChanged,easeInValue: false));
             }
             return output;
         }

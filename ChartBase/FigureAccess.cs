@@ -10,10 +10,9 @@ namespace SimpleXart.ChartBase
     {
         internal object Source => _source;
         private object _source;
-        private INotifyPropertyChanged _notifier;
 
-        public bool DirectAccess { get; set; }
-        private Figure _directSource;
+        private INotifyPropertyChanged _notifier;
+        private bool _subscribed = false;
 
         PropertyInfo ValueProperty, DescribtionProperty, ColorProperty;
 
@@ -27,12 +26,11 @@ namespace SimpleXart.ChartBase
         private float _value;
         internal float Value
         {
-           get
-           {
-             if (DirectAccess) return _directSource.Value;
-             return _value;
-           }
-           private set { _value = value; }
+            get
+            {
+                return _value;
+            }
+            private set { _value = value; }
         }
 
         internal string ValueAnimationHandle = Guid.NewGuid().ToString();
@@ -44,7 +42,6 @@ namespace SimpleXart.ChartBase
         {
             get
             {
-                if (DirectAccess) return _directSource.Describtion;
                 return _describtion;
             }
             private set { _describtion = value; }
@@ -55,7 +52,6 @@ namespace SimpleXart.ChartBase
         {
             get
             {
-                if (DirectAccess) return _directSource.Color.ToSKColor().WithAlpha((byte)(_directSource.Color.A * Entrance));
                 return _color.WithAlpha((byte)(_color.Alpha * Entrance));
             }
             private set { _color = value; }
@@ -64,23 +60,20 @@ namespace SimpleXart.ChartBase
         internal float Entrance { get; set; }
         internal string EntranceHandle { get; set; } = Guid.NewGuid().ToString();
 
-        public FigureAccess(object source, Action<FigureAccess> onValueChanged)
+        public FigureAccess(object source, Action<FigureAccess> onValueChanged,bool easeInValue)
         {
+            //the chart supplies the onValueChanged action, that gets invoked on the chart whenever the value changes, to animate the change.
             OnValueChanged = onValueChanged;
 
-            //If the source is a Figure, Access the values directly.
-            if(source is Figure figureSource)
-            {
-                DirectAccess = true;
-                _directSource = figureSource;
-                return;
-            }
 
-            //When created because theres a new List of Figures, the chart animates opening as a whole,
-            //and nothings gets animated. When created, because a new Figure was added to the list,
-            //The creating chart sets Entrance to 0 and holds the animation.
-            //In either case, the ValueDeltaProportion is set to 1. ValueProportion only animates, when a Value changes.
-            ValueDeltaProportion = 1f; 
+
+            // Every Figure gets initialized with its full Value. ValueDeltaProportion is responsible for animating change, not the entrance.
+            ValueDeltaProportion = 1f;
+
+            /* When the access gets created because theres a new List of Figures, the chart animates its own opening, so all the figures need to have their full value immediately.
+             * When created because a new Figure was added to the list,  easeInValue should be set to true, so the value gets eased in.
+             */
+            Entrance = easeInValue ? 0f : 1f;
 
             _source = source;
             _notifier = source as INotifyPropertyChanged;
@@ -98,8 +91,8 @@ namespace SimpleXart.ChartBase
                     {
                         float newValue = GetValue();
                         ValueDeltaProportion = AnimatedValue / newValue;
-                        //The chart now needs to animate the ValueDeltaProperty
-                        //TODO: ALSO ANIMATE WHEN YOU HAVE A DIRECT ACCESS SOURCE OR GET RID OF DIRECT SOURCE
+                        // The chart animates the ValueDeltaProperty, this is done on the chart, instead of this value, because the animation 
+                        // handle needs to be executed there.
                         Value = newValue;
                         OnValueChanged?.Invoke(this);
                         break;
@@ -119,14 +112,14 @@ namespace SimpleXart.ChartBase
 
         private void Subscribe()
         {
-           if(_notifier != null)
+            if (_notifier != null)
             {
                 _notifier.PropertyChanged += OnPropertyChanged;
             }
             _subscribed = true;
         }
 
-        private bool _subscribed = false;
+
         internal void Unsubscribe()
         {
             if (_subscribed)
