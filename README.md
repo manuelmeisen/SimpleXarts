@@ -50,7 +50,7 @@ public ObservableCollection<Figure> Data { get; set; } = new ObservableCollectio
 ##### References:
 * [DonutChart](Source/SpecificCharts/DonutChart.cs)
 
-![gallery](Documentation/Gallery/DonutChartExample1.png)
+![gallery](Documentation/Gallery/DonutChartCreation.gif)
 
 #### 3) Update your data
 ```csharp
