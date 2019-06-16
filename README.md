@@ -39,7 +39,7 @@ public ObservableCollection<Figure> Data { get; set; } = new ObservableCollectio
     }
 };
 ```
-##### References:
+###### References:
 * [Figure](Source/ChartBase/Figure.cs)
 * [ObservableCollection<T>](https://docs.microsoft.com/de-de/dotnet/api/system.collections.objectmodel.observablecollection-1?view=netframework-4.8)
 * [Xamarin.Forms.Color](https://docs.microsoft.com/de-de/dotnet/api/xamarin.forms.color?view=xamarin-forms)
@@ -47,7 +47,7 @@ public ObservableCollection<Figure> Data { get; set; } = new ObservableCollectio
 ```xaml
 <SimpleXarts:DonutChart Figures="{Binding Data} />
 ```
-##### References:
+###### References:
 * [DonutChart](Source/SpecificCharts/DonutChart.cs)
 
 ![gallery](Documentation/Gallery/DonutChartCreation.gif)
@@ -62,10 +62,16 @@ Data.Add(
     new Figure(20)
     {
         Describtion = "Spices",
-        Color = Color.FromRgb(66, 72, 86)
+        Color = Color.FromRgb(183, 93, 174)
     }
 );
 
 //remove a figure from the chart
 Data.RemoveAt(1);
 ```
+###### References:
+* [Figure](Source/ChartBase/Figure.cs)
+* [ObservableCollection<T>](https://docs.microsoft.com/de-de/dotnet/api/system.collections.objectmodel.observablecollection-1?view=netframework-4.8)
+* [Xamarin.Forms.Color](https://docs.microsoft.com/de-de/dotnet/api/xamarin.forms.color?view=xamarin-forms)
+
+![gallery](Documentation/Gallery/DonutChartUpdate.gif)
