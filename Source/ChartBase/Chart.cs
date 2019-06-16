@@ -118,14 +118,15 @@ namespace SimpleXart
             instance.Redraw();
         }
 
-        public void Redraw()
+        public void Redraw(bool force = false)
         {
-            if (lastRedraw.Ticks + 400000 < DateTime.Now.Ticks)
+            if (lastRedraw.Ticks + 400000 < DateTime.Now.Ticks || force)
             {
                 InvalidateSurface();
                 lastRedraw = DateTime.Now;
             }
         }
+
 
         private void OnFiguresChangedInstance(ICollection oldValue)
         {
@@ -211,7 +212,7 @@ namespace SimpleXart
                         }
                         access.Unsubscribe();
                         var leaveAnimation = new Animation((v) => { access.Entrance = (float)v; Redraw(); }, access.Entrance, 0, Easing.CubicInOut);
-                        leaveAnimation.Commit(this, access.EntranceHandle, _animationFramerate, 500u, finished: (v, c) => FigureAccesses.Remove(o));
+                        leaveAnimation.Commit(this, access.EntranceHandle, _animationFramerate, 500u, finished: (v, c) => { FigureAccesses.Remove(o); Redraw(force: true); }) ;
 
                     }
                     break;
