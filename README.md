@@ -11,11 +11,11 @@ to support a wider range of platforms.
 
 Its not recommended to be used in its current state.
 
-### Setup project
+### Display a chart
 
 #### 1) Create the data to bind to a chart.
 ```csharp
-public ObservableCollection<[Figure](Source/ChartBase/Figure.cs)> Data { get; set; } = new ObservableCollection<Figure>()
+public ObservableCollection<Figure> Data { get; set; } = new ObservableCollection<Figure>()
 {
     new Figure(20)
     {
@@ -39,16 +39,18 @@ public ObservableCollection<[Figure](Source/ChartBase/Figure.cs)> Data { get; se
     }
 };
 ```
+##### References:
+..* [Figure](Source/ChartBase/Figure.cs)
+..* [ObservableCollection<T>](https://docs.microsoft.com/de-de/dotnet/api/system.collections.objectmodel.observablecollection-1?view=netframework-4.8)
 
 #### 2) Bind the data to a chart.
 ```xaml
 <SimpleXarts:DonutChart Figures="{Binding Data} />
 ```
+##### References:
+..* [DonutChart](Source/SpecificCharts/DonutChart.cs)
 
 ![gallery](Documentation/Gallery/DonutChartExample1.png)
-
-
-
 
 #### 3) Update your data
 ```csharp
