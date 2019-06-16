@@ -59,7 +59,7 @@ namespace SimpleXart
         }
 
         public static readonly BindableProperty PaddingProperty
-            = BindableProperty.Create("Padding", typeof(float), typeof(Chart), 0f);
+            = BindableProperty.Create("Padding", typeof(float), typeof(Chart), 20f);
         public float Padding
         {
             get { return (float)GetValue(PaddingProperty); }
@@ -246,6 +246,7 @@ namespace SimpleXart
 
         public Chart()
         {
+
             var visualElementRepresentation = this as VisualElement;
             visualElementRepresentation.BackgroundColor = Color.Transparent;
             PaintSurface += OnPaintSurface;
