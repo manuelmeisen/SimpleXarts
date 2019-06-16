@@ -20,12 +20,12 @@ public ObservableCollection<Figure> Data { get; set; } = new ObservableCollectio
     new Figure(20)
     {
         Describtion = "Fruit",
-        Color = System.Drawing.Color.FromArgb(240, 125, 100)
+        Color = Xamarin.Forms.Color.FromRgb(240, 125, 100)
     },
     new Figure(5)
     {
         Describtion = "Fish",
-        Color = System.Drawing.Color.FromArgb(100, 188, 194)
+        Color = Xamarin.Forms.Color.FromRgb(100, 188, 194)
     },
     new Figure(12)
     {
@@ -40,15 +40,15 @@ public ObservableCollection<Figure> Data { get; set; } = new ObservableCollectio
 };
 ```
 ##### References:
-..* [Figure](Source/ChartBase/Figure.cs)
-..* [ObservableCollection<T>](https://docs.microsoft.com/de-de/dotnet/api/system.collections.objectmodel.observablecollection-1?view=netframework-4.8)
-
+* [Figure](Source/ChartBase/Figure.cs)
+* [ObservableCollection<T>](https://docs.microsoft.com/de-de/dotnet/api/system.collections.objectmodel.observablecollection-1?view=netframework-4.8)
+* [Xamarin.Forms.Color](https://docs.microsoft.com/de-de/dotnet/api/xamarin.forms.color?view=xamarin-forms)
 #### 2) Bind the data to a chart.
 ```xaml
 <SimpleXarts:DonutChart Figures="{Binding Data} />
 ```
 ##### References:
-..* [DonutChart](Source/SpecificCharts/DonutChart.cs)
+* [DonutChart](Source/SpecificCharts/DonutChart.cs)
 
 ![gallery](Documentation/Gallery/DonutChartExample1.png)
 
