@@ -15,7 +15,7 @@ Its not recommended to be used in its current state.
 
 #### 1) Create the data to bind to a chart.
 ```csharp
-public ObservableCollection<Figure> Data { get; set; } = new ObservableCollection<Figure>()
+public ObservableCollection<[Figure](Source/ChartBase/Figure.cs)> Data { get; set; } = new ObservableCollection<Figure>()
 {
     new Figure(20)
     {
