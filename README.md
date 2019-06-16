@@ -40,7 +40,7 @@ public ObservableCollection<Figure> Data { get; set; } = new ObservableCollectio
 };
 ```
 
-#### 2) Bind it to your chart.
+#### 2) Bind the data to a chart.
 ```xaml
 <SimpleXarts:DonutChart Figures="{Binding Data} />
 ```
@@ -52,7 +52,10 @@ public ObservableCollection<Figure> Data { get; set; } = new ObservableCollectio
 
 #### 3) Update your data
 ```csharp
+//change the value of an existing Figure
 Data[0].Value = 30;
+
+//add a new Figure to the chart
 Data.Add(
     new Figure(20)
     {
@@ -60,5 +63,7 @@ Data.Add(
         Color = Color.FromRgb(66, 72, 86)
     }
 );
+
+//remove a figure from the chart
 Data.RemoveAt(1);
 ```
