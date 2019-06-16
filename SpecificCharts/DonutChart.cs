@@ -48,7 +48,7 @@ namespace SimpleXart
         protected float InnerCirclePropoertionAnimated { get; set; }
         private const string InnerCircleProportionAnimationHandle = "InnerCircleProportion";
         public static readonly BindableProperty InnerCircleProportionProperty =
-            BindableProperty.Create("InnerCircleProportion", typeof(float), typeof(DonutChart), 0.35f, propertyChanged: OnInnerCircleProportionChanged);
+            BindableProperty.Create("InnerCircleProportion", typeof(float), typeof(DonutChart), 0.45f, propertyChanged: OnInnerCircleProportionChanged);
 
         //Animates the InnerCircleProportion
         private static void OnInnerCircleProportionChanged(BindableObject bindable, object oldValue, object newValue)
