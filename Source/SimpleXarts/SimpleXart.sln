@@ -5,11 +5,11 @@ VisualStudioVersion = 15.0.28307.329
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleXart", "SimpleXart.csproj", "{C2FDC0BB-E3A8-4512-8839-75C529D0FA0D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleXart.Consumer", "..\..\SimpleXart.Consumer\SimpleXart.Consumer\SimpleXart.Consumer.csproj", "{8BE2BF45-D596-493C-9336-EB59FA3C89FF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleXart.Consumer", "..\SimpleXarts.Consumer\SimpleXart.Consumer\SimpleXart.Consumer.csproj", "{8BE2BF45-D596-493C-9336-EB59FA3C89FF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleXart.Consumer.Android", "..\..\SimpleXart.Consumer\SimpleXart.Consumer.Android\SimpleXart.Consumer.Android.csproj", "{80C3A269-EDFC-451F-B67C-75C736ECBA2F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleXart.Consumer.Android", "..\SimpleXarts.Consumer\SimpleXart.Consumer.Android\SimpleXart.Consumer.Android.csproj", "{80C3A269-EDFC-451F-B67C-75C736ECBA2F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleXart.Consumer.iOS", "..\..\SimpleXart.Consumer\SimpleXart.Consumer.iOS\SimpleXart.Consumer.iOS.csproj", "{B7E55FAF-EBE1-45C1-9741-41C16A443183}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleXart.Consumer.iOS", "..\SimpleXarts.Consumer\SimpleXart.Consumer.iOS\SimpleXart.Consumer.iOS.csproj", "{B7E55FAF-EBE1-45C1-9741-41C16A443183}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
