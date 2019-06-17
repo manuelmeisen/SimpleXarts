@@ -14,6 +14,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\SimpleXarts\SimpleXarts.csproj" />
+    <ProjectReference Include="..\..\SimpleXarts\SimpleXarts.csproj" />
   </ItemGroup>
 </Project>
