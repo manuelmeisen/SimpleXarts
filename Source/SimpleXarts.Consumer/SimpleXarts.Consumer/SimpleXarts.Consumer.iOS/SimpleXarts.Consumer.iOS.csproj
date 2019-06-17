@@ -5,13 +5,13 @@
     <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{B7E55FAF-EBE1-45C1-9741-41C16A443183}</ProjectGuid>
+    <ProjectGuid>{F59815AA-9ED4-4F1D-959A-5ED56770AAD9}</ProjectGuid>
     <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <TemplateGuid>{6143fdea-f3c2-4a09-aafa-6e230626515e}</TemplateGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>SimpleXart.Consumer.iOS</RootNamespace>
+    <RootNamespace>SimpleXarts.Consumer.iOS</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
-    <AssemblyName>SimpleXart.Consumer.iOS</AssemblyName>
+    <AssemblyName>SimpleXarts.Consumer.iOS</AssemblyName>
     <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
@@ -152,9 +152,9 @@
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
-    <ProjectReference Include="..\SimpleXart.Consumer\SimpleXart.Consumer.csproj">
-      <Project>{49BFB6F3-E210-4269-BE71-C0F07B90CA78}</Project>
-      <Name>SimpleXart.Consumer</Name>
+    <ProjectReference Include="..\SimpleXarts.Consumer\SimpleXarts.Consumer.csproj">
+      <Project>{95D0C404-1159-47FD-BB59-35708A86CC45}</Project>
+      <Name>SimpleXarts.Consumer</Name>
     </ProjectReference>
   </ItemGroup>
 </Project>

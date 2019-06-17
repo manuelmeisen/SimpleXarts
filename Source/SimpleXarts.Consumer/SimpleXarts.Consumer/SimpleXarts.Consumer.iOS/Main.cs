@@ -5,7 +5,7 @@ using System.Linq;
 using Foundation;
 using UIKit;
 
-namespace SimpleXart.Consumer.iOS
+namespace SimpleXarts.Consumer.iOS
 {
     public class Application
     {

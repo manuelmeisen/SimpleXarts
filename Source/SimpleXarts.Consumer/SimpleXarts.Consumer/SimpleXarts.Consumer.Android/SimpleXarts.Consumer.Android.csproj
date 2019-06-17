@@ -3,12 +3,12 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{80C3A269-EDFC-451F-B67C-75C736ECBA2F}</ProjectGuid>
+    <ProjectGuid>{09E0F5EB-9683-4ACD-9F6F-7405F13F7E96}</ProjectGuid>
     <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <TemplateGuid>{c9e5eea5-ca05-42a1-839b-61506e0a37df}</TemplateGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>SimpleXart.Consumer.Droid</RootNamespace>
-    <AssemblyName>SimpleXart.Consumer.Android</AssemblyName>
+    <RootNamespace>SimpleXarts.Consumer.Droid</RootNamespace>
+    <AssemblyName>SimpleXarts.Consumer.Android</AssemblyName>
     <AndroidApplication>True</AndroidApplication>
     <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
     <AndroidResgenClass>Resource</AndroidResgenClass>
@@ -64,9 +64,7 @@
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
-    <None Include="Properties\AndroidManifest.xml">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="Properties\AndroidManifest.xml" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Tabbar.axml" />
@@ -94,9 +92,9 @@
     <Folder Include="Resources\drawable\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\SimpleXart.Consumer\SimpleXart.Consumer.csproj">
-      <Project>{49BFB6F3-E210-4269-BE71-C0F07B90CA78}</Project>
-      <Name>SimpleXart.Consumer</Name>
+    <ProjectReference Include="..\SimpleXarts.Consumer\SimpleXarts.Consumer.csproj">
+      <Project>{95D0C404-1159-47FD-BB59-35708A86CC45}</Project>
+      <Name>SimpleXarts.Consumer</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

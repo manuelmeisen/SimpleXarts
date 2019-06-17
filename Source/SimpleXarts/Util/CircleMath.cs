@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace SimpleXart.Util
+namespace SimpleXarts.Util
 {
     internal static class CircleMath
     {

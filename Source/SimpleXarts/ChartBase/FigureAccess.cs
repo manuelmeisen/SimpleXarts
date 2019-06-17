@@ -1,10 +1,10 @@
-﻿using SimpleXart.Converters;
+﻿using SimpleXarts.Converters;
 using SkiaSharp;
 using System;
 using System.ComponentModel;
 using System.Reflection;
 
-namespace SimpleXart.ChartBase
+namespace SimpleXarts.ChartBase
 {
     internal class FigureAccess
     {

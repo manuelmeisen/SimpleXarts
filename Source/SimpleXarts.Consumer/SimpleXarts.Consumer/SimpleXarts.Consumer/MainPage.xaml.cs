@@ -1,15 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Xamarin.Forms;
 
-namespace SimpleXart.Consumer
+namespace SimpleXarts.Consumer
 {
-
     public class MyFigure : INotifyPropertyChanged
     {
 
@@ -125,7 +120,7 @@ namespace SimpleXart.Consumer
         }
 
 
-        
+
 
         public MainPage()
         {
@@ -236,8 +231,8 @@ namespace SimpleXart.Consumer
             {
 
                 //
-                
-                
+
+
 
                 var rng = new Random();
                 Figures[rng.Next(0, Figures.Count)].Value = rng.Next(10, 80);

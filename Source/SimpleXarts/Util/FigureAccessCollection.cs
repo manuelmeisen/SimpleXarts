@@ -1,10 +1,10 @@
-﻿using SimpleXart.ChartBase;
+﻿using SimpleXarts.ChartBase;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Text;
 
-namespace SimpleXart
+namespace SimpleXarts
 {
     internal class FigureAccessCollection : KeyedCollection<object, FigureAccess>
     {

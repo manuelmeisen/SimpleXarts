@@ -1,6 +1,6 @@
 ﻿using SkiaSharp;
 using System.Drawing;
-namespace SimpleXart.Converters
+namespace SimpleXarts.Converters
 {
     internal static class DrawingColorExtensions
     {

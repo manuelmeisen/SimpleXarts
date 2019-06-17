@@ -23,15 +23,15 @@
     <key>MinimumOSVersion</key>
     <string>8.0</string>
     <key>CFBundleDisplayName</key>
-    <string>SimpleXart.Consumer</string>
+    <string>SimpleXarts.Consumer</string>
     <key>CFBundleIdentifier</key>
-    <string>com.companyname.SimpleXart.Consumer</string>
+    <string>com.companyname.SimpleXarts.Consumer</string>
     <key>CFBundleVersion</key>
     <string>1.0</string>
     <key>UILaunchStoryboardName</key>
     <string>LaunchScreen</string>
     <key>CFBundleName</key>
-    <string>SimpleXart.Consumer</string>
+    <string>SimpleXarts.Consumer</string>
     <key>XSAppIconAssets</key>
     <string>Assets.xcassets/AppIcon.appiconset</string>
 </dict>

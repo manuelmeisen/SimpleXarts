@@ -1,13 +1,13 @@
-﻿using SimpleXart.ChartBase;
+﻿using SimpleXarts.ChartBase;
 using SkiaSharp;
 using System;
 using Xamarin.Forms;
-using SimpleXart.Util;
-using SimpleXart.Converters;
+using SimpleXarts.Util;
+using SimpleXarts.Converters;
 using System.Linq;
 using WindowsColor = System.Drawing.Color;
 
-namespace SimpleXart
+namespace SimpleXarts
 {
     public class DonutChart : Chart
     {

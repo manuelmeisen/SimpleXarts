@@ -1,5 +1,5 @@
-﻿using SimpleXart;
-using SimpleXart.ChartBase;
+﻿using SimpleXarts;
+using SimpleXarts.ChartBase;
 using SkiaSharp;
 using System;
 using System.Collections.Generic;
@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using Xamarin.Forms;
 
-namespace SimpleXart
+namespace SimpleXarts
 {
     public class BarChart : Chart
     {

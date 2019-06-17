@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel;
 using System.Drawing;
 
-namespace SimpleXart
+namespace SimpleXarts
 {
     public class Figure : INotifyPropertyChanged
     {

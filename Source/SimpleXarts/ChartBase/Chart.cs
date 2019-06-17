@@ -1,15 +1,15 @@
 ﻿using SkiaSharp;
 using SkiaSharp.Views.Forms;
 using Xamarin.Forms;
-using SimpleXart.Converters;
+using SimpleXarts.Converters;
 using System.Collections.Specialized;
 using System.Collections;
 using System;
 using System.Collections.ObjectModel;
-using SimpleXart.ChartBase;
+using SimpleXarts.ChartBase;
 using System.Linq;
 
-namespace SimpleXart
+namespace SimpleXarts
 {
     public abstract class Chart : SKCanvasView
     {

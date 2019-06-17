@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace SimpleXart
+namespace SimpleXarts
 {
     public enum BarOrientation : byte { Up, Down, Left, Right}
 }

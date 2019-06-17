@@ -1,12 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:SimpleXart.Consumer"
-             x:Class="SimpleXart.Consumer.MainPage"
-             xmlns:SimpleXarts="clr-namespace:SimpleXart;assembly=SimpleXart"
-             >
-    
-        
+             xmlns:local="clr-namespace:SimpleXarts.Consumer"
+             x:Class="SimpleXarts.Consumer.MainPage"
+             xmlns:SimpleXarts="clr-namespace:SimpleXarts;assembly=SimpleXarts">
 
     <SimpleXarts:DonutChart Figures="{Binding Data}" EnableTouchEvents="True" Touch="DonutChart_Touch" />
 

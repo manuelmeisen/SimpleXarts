@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace SimpleXart.Converters
+namespace SimpleXarts.Converters
 {
     internal static class SKColorExtensions
     {
