@@ -3,12 +3,22 @@ using System.Drawing;
 
 namespace SimpleXarts
 {
+    /// <summary>
+    /// Implements all the properties needed to be bound to the Figures BindableProperty of a chart.
+    /// Any type can be bound to Figures, but only the implemented properties will be accessed.
+    /// Implements PropertyChanged to update the properties of the figure on the chart.
+    /// A constructor is not needed.
+    /// 
+    /// Properties to implement in a custom class thats bound to Figures:
+    /// 
+    ///     float Value: Exposes the value of a chart entry.
+    ///     string Describtion: Exposes the describtion of a chart entry.
+    ///     System.Drawing.Color Color : Exposes the color of a chart entry.
+    ///     
+    /// </summary>
     public class Figure : INotifyPropertyChanged
     {
-
         public event PropertyChangedEventHandler PropertyChanged;
-
-
 
         private float _value;
         public float Value
@@ -23,7 +33,6 @@ namespace SimpleXarts
                 PropertyChanged?.Invoke(this,new PropertyChangedEventArgs("Value"));
             }
         }
-
 
         private string _describtion;
         public string Describtion
@@ -58,7 +67,6 @@ namespace SimpleXarts
             Value = value;
             Describtion = describtion;
         }
-
 
     }
 }

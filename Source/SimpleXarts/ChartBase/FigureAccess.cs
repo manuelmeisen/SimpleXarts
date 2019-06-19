@@ -65,8 +65,6 @@ namespace SimpleXarts.ChartBase
             //the chart supplies the onValueChanged action, that gets invoked on the chart whenever the value changes, to animate the change.
             OnValueChanged = onValueChanged;
 
-
-
             // Every Figure gets initialized with its full Value. ValueDeltaProportion is responsible for animating change, not the entrance.
             ValueDeltaProportion = 1f;
 
